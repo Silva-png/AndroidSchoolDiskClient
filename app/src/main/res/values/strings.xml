@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">SchoolDiskClient</string>
+
+    <string-array name="instructors">
+        <item>Pedro Almeida</item>
+        <item>Paulo Ribeiro</item>
+        <item>Rita Sousa</item>
+        <item>Matilde Sousa</item>
+        <item>Matilde Coelho</item>
+        <item>Dinis Sousa</item>
+        <item>Carla Pereira</item>
+        <item>Maria Vieira</item>
+        <item>Joaquim Vieira</item>
+        <item>Maria Santos</item>
+        <item>Carlos Freitas</item>
+        <item>Pedro Coelho</item>
+    </string-array>
+
 </resources>
