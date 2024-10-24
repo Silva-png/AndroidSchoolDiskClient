@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.*;
@@ -7,14 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class IntructorActivity extends AppCompatActivity {
@@ -63,6 +59,8 @@ public class IntructorActivity extends AppCompatActivity {
         if (item.getItemId() == R.id.Settings1){
             Toast.makeText(IntructorActivity.this,
                     "Settings option selected", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(IntructorActivity.this, SettingsActivity.class);
+            startActivity(intent);
             return true;
         }
     return super.onOptionsItemSelected(item);
@@ -85,18 +83,24 @@ public class IntructorActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),
                     "Delete option selected:" + id + ":" + str,
                     Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(IntructorActivity.this, DeleteIntructorActivity.class);
+            startActivity(intent);
             return true;
         }
         if (item.getItemId() == R.id.editdata){
             Toast.makeText(getApplicationContext(),
                     "Edit data option selected:" + id + ":" + str,
                     Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(IntructorActivity.this, EditInstructorActivity.class);
+            startActivity(intent);
             return true;
         }
         if (item.getItemId() == R.id.editdetails){
             Toast.makeText(getApplicationContext(),
                     "Delete option selected:" + id + ":" + str,
                     Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(IntructorActivity.this, EditInstructorActivity.class);
+            startActivity(intent);
             return true;
         }
         return super.onContextItemSelected(item);
