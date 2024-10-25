@@ -4,10 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import android.view.*;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -81,25 +78,28 @@ public class IntructorActivity extends AppCompatActivity {
         String str = (String) adapter.getItem(pos);
         if (item.getItemId() == R.id.delete){
             Toast.makeText(getApplicationContext(),
-                    "Delete option selected:" + id + ":" + str,
+                    "Delete option selected:" + str,
                     Toast.LENGTH_LONG).show();
             Intent intent = new Intent(IntructorActivity.this, DeleteIntructorActivity.class);
+            intent.putExtra("str", str);
             startActivity(intent);
             return true;
         }
         if (item.getItemId() == R.id.editdata){
             Toast.makeText(getApplicationContext(),
-                    "Edit data option selected:" + id + ":" + str,
+                    "Edit data option selected: " + str,
                     Toast.LENGTH_LONG).show();
             Intent intent = new Intent(IntructorActivity.this, EditInstructorActivity.class);
+            intent.putExtra("str", str);
             startActivity(intent);
             return true;
         }
         if (item.getItemId() == R.id.editdetails){
             Toast.makeText(getApplicationContext(),
-                    "Delete option selected:" + id + ":" + str,
+                    "Delete option selected:" + str,
                     Toast.LENGTH_LONG).show();
             Intent intent = new Intent(IntructorActivity.this, EditInstructorActivity.class);
+            intent.putExtra("str", str);
             startActivity(intent);
             return true;
         }

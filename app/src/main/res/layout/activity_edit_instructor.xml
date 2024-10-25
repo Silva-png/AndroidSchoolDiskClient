@@ -10,16 +10,21 @@
             android:text="Initials:"/>
 
     <EditText
+            android:id="@+id/initialsdelete"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Name:"/>
+
     <EditText
+            android:id="@+id/nomedelete"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:inputType="text"/>
 
     <LinearLayout
             android:layout_width="match_parent"
